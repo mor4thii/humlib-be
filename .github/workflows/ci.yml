@@ -40,7 +40,7 @@ jobs:
     needs: build
     steps:
       - name: "Download test results"
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: "test-results"
       - name: "Publish test results"
@@ -55,7 +55,7 @@ jobs:
     needs: build
     steps:
       - name: "Download coverage report"
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: "coverage-report"
       - name: "Upload to Codacy"
